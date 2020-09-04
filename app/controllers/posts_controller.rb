@@ -3,10 +3,12 @@ class PostsController < ApplicationController
     def index
     end
 
+    # Display New Post Form
     def new
         # @post = Post.new
     end
 
+    # Create New Post
     def create
         # @post = Post.new(post_params)
 
@@ -21,6 +23,7 @@ class PostsController < ApplicationController
 
     private
 
+    # Display the created posts with title and content
     def post_params
         params.require(:post).permit(:title, :content)
     end
