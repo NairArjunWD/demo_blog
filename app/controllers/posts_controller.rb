@@ -12,6 +12,8 @@ class PostsController < ApplicationController
     def create
         # @post = Post.new(post_params)
 
+        # IF BELOW COMMENT POST IS USELESS ONCE PROJECT IS COMPLETE, DELETE
+
         # if @post.save
         #     redirect_to @post
         # else
