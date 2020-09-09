@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
     def index
+        @post = Post.all
     end
 
     def show
@@ -9,7 +10,7 @@ class PostsController < ApplicationController
 
     # Display New Post Form
     def new
-        # @post = Post.new
+        @post = Post.new
     end
 
     # Create New Post

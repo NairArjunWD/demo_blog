@@ -1,5 +1,9 @@
 <h1 class="title">Demo Blog</h1>
 
+<%= link_to 'My Blog', controller: 'posts' %>
+
+<%= link_to 'New Blog', new_post_path %>
+
 # Template 1
 
 <h2 class="blog">Blog Title</h2>
@@ -33,3 +37,19 @@
 <h4 class="time">10:30AM Sept 7, 2020</h4>
 
 <h4 class="author">Lorem Ipsum</h4>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th></th>
+    </tr>
+
+    <% @post.each do |post| %>
+        <tr>
+            <th><%= post.title %></th>
+            <th><%= post.content %></th>
+            <th><%= link_to 'Show', post_path(post) %></th>
+        </tr>
+    <% end %>
+</table>
