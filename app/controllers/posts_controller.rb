@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
     # Display New Post Form
     def new
-        # @post = Post.new
+        @post = Post.new
     end
 
     # Create New Post
