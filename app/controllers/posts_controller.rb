@@ -10,15 +10,15 @@ class PostsController < ApplicationController
 
     # Create New Post
     def create
-        # @post = Post.new(post_params)
+        @post = Post.new(post_params)
 
         # IF BELOW COMMENT POST IS USELESS ONCE PROJECT IS COMPLETE, DELETE
 
-        # if @post.save
-        #     redirect_to @post
-        # else
-        #     render 'new'
-        # end
+        if @post.save
+            redirect_to @post
+        else
+            render 'new'
+        end
 
         render plain: params[:post].inspect
     end
