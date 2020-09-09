@@ -3,6 +3,10 @@ class PostsController < ApplicationController
     def index
     end
 
+    def show
+        @post = Post.find(params[:id])
+    end
+
     # Display New Post Form
     def new
         # @post = Post.new
@@ -11,8 +15,6 @@ class PostsController < ApplicationController
     # Create New Post
     def create
         @post = Post.new(post_params)
-
-        # IF BELOW COMMENT POST IS USELESS ONCE PROJECT IS COMPLETE, DELETE
 
         if @post.save
             redirect_to @post
