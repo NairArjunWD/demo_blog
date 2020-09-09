@@ -22,7 +22,7 @@ class PostsController < ApplicationController
             render 'new'
         end
 
-        render plain: params[:post].inspect
+        # render plain: params[:post].inspect
     end
 
     private

@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
 
-    t.string :title
+    # t.string :title
 
-    t.text :text
+    # t.text :content
     
 end
