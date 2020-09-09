@@ -33,3 +33,19 @@
 <h4 class="time">10:30AM Sept 7, 2020</h4>
 
 <h4 class="author">Lorem Ipsum</h4>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th></th>
+    </tr>
+
+    <% @post.each do |post| %>
+        <tr>
+            <th><%= post.title %></th>
+            <th><%= post.content %></th>
+            <th><%= link_to 'Show', post_path(post) %></th>
+        </tr>
+    <% end %>
+</table>
