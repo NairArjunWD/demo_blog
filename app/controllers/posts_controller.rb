@@ -40,11 +40,18 @@ class PostsController < ApplicationController
         end
     end
 
+    def destroy
+        @post = Post.find(params[:id])
+        @post.destroy
+
+        redirect_to post_path
+    end
+
     private
 
-    # Display the created posts with title and content
-    def post_params
-        params.require(:post).permit(:title, :content)
-    end
+        # Display the created posts with title and content
+        def post_params
+            params.require(:post).permit(:title, :content)
+        end
 
 end
