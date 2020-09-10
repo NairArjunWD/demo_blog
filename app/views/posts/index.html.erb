@@ -42,7 +42,7 @@
     <tr>
         <th>Title</th>
         <th>Text</th>
-        <th></th>
+        <th colspan="2"></th>
     </tr>
 
     <% @post.each do |post| %>
@@ -50,6 +50,7 @@
             <th><%= post.title %></th>
             <th><%= post.content %></th>
             <th><%= link_to 'Show', post_path(post) %></th>
+            <th><%= link_to 'Edit', edit_post_path(post) %></th>
         </tr>
     <% end %>
 </table>
